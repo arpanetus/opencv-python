@@ -202,7 +202,7 @@ def main():
             "-DWITH_CUBLAS=1",
             "-DOPENCV_DNN_CUDA=ON",
             "-DCUDA_ARCH_BIN=9.0",
-            # "-DOPENCV_EXTRA_MODULES_PATH=/data/opencv-contrib/modules/",
+            "-DOPENCV_EXTRA_MODULES_PATH=/data/opencv-contrib/modules/",
         ]
         + (
             # CMake flags for windows/arm64 build
@@ -216,11 +216,11 @@ def main():
             else ["-DCMAKE_GENERATOR_PLATFORM=x64"] if is64 and sys.platform == "win32"
             else []
           )
-        + (
-            ["-DOPENCV_EXTRA_MODULES_PATH=" + os.path.abspath("/data/opencv_contrib/modules")]
-            if build_contrib
-            else []
-        )
+        # + (
+        #     ["-DOPENCV_EXTRA_MODULES_PATH=" + os.path.abspath("/data/opencv_contrib/modules")]
+        #     if build_contrib
+        #     else []
+        # )
     )
 
     if build_headless:
