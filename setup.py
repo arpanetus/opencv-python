@@ -202,7 +202,7 @@ def main():
             "-DWITH_CUBLAS=1",
             "-DOPENCV_DNN_CUDA=ON",
             "-DCUDA_ARCH_BIN=9.0",
-            "-DOPENCV_EXTRA_MODULES_PATH=/data/opencv-contrib/modules/",
+            "-DOPENCV_EXTRA_MODULES_PATH=/data/opencv_contrib/modules/",
         ]
         + (
             # CMake flags for windows/arm64 build
