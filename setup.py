@@ -198,7 +198,7 @@ def main():
             "-DBUILD_OPENEXR=ON",
             # CuDNN deps
             "-DWITH_CUDA=ON",
-            "-DWITH_CUDNN=ON,
+            "-DWITH_CUDNN=ON",
             "-DWITH_CUBLAS=1",
             "-DOPENCV_DNN_CUDA=ON",
             "-DCUDA_ARCH_BIN=9.0",
